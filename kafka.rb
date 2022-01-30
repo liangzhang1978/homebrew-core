@@ -1,7 +1,7 @@
 class Kafka < Formula
   desc "Publish-subscribe messaging rethought as a distributed commit log"
   homepage "https://kafka.apache.org/"
-  url "https://www.apache.org/dyn/closer.cgi?path=/kafka/2.0.0/kafka_2.12-2.0.0.tgz"
+  url "https://archive.apache.org/dist/kafka/2.0.0/kafka_2.12-2.0.0.tgz"
   sha256 "b5f1539c4030e6f6e64d0c14a9acea31156e7cbf2cb66c93ca2b6ca732ba7955"
 
   bottle do
@@ -19,8 +19,6 @@ class Kafka < Formula
     reason "The bottle requires Java 1.8."
     satisfy { quiet_system("/usr/libexec/java_home --version 1.8 --failfast") }
   end
-
-  depends_on "openjdk"
 
   def install
     data = var/"lib"
