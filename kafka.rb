@@ -20,6 +20,8 @@ class Kafka < Formula
     satisfy { quiet_system("/usr/libexec/java_home --version 1.8 --failfast") }
   end
 
+  depends_on "openjdk"
+
   def install
     data = var/"lib"
     inreplace "config/server.properties",
